@@ -35,6 +35,7 @@ public class HotelHabitacionService {
 			throw new EntityNotFoundException("hotel no es valido");
 		
 		hotelEntity.get().getHabitaciones().add(habitacionEntity.get());
+        hotelEntity.get().setNroHabitaciones(hotelEntity.get().getNroHabitaciones()+1);
 		log.info("Termina proceso de agregarle una habitacion al hotel con id = {0}", hotelId);
 		return habitacionEntity.get();
 	}

@@ -17,9 +17,9 @@ public class HotelService {
 	HotelRepository hotelRepository;
 
     @Transactional
-	public HotelEntity createEditorial(HotelEntity hotelEntity) throws IllegalOperationException {
+	public HotelEntity createHotel(HotelEntity hotelEntity) throws IllegalOperationException {
 		log.info("Inicia proceso de creación del hotel");
-		if (!hotelRepository.findByName(hotelEntity.getNombre()).isEmpty()) {
+		if (!hotelRepository.findByNombre(hotelEntity.getNombre()).isEmpty()) {
 			throw new IllegalOperationException("El nombre del hotel ya existe");
 		}
 		log.info("Termina proceso de creación del hotel");
