@@ -95,7 +95,7 @@ public class HabitacionTest {
 			HabitacionEntity newEntity = factory.manufacturePojo(HabitacionEntity.class);
 			newEntity.setNroBanos(2);
             newEntity.setNroCamas(0);
-            newEntity.setHotel(hotelList.get(0);
+            newEntity.setHotel(hotelList.get(0));
 			habitacionService.createHabitacion(newEntity);
 		});
 	}
